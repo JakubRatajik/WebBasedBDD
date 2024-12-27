@@ -63,3 +63,9 @@ local.properties
 
 # end of https://github.com/github/gitignore/blob/main/Global/Eclipse.gitignore
 .DS_Store
+
+# xText project
+generated/
+src-gen/
+xtend-gen/
+*.xml_gen
