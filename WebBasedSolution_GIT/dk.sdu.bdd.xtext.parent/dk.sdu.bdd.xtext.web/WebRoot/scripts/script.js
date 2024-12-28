@@ -365,6 +365,9 @@ function hoversMouseOverLibrary() {
 function storeBlockToLibrary(block) {
 	let localStorageName;
 	
+	var audio = new Audio("../book_sound_effect.mp3");
+	audio.play();
+	
 	if (currentTab === entitiesTab){
 		localStorageName = 'savedEntityBlocks';
 	}
@@ -377,7 +380,7 @@ function storeBlockToLibrary(block) {
 
 	savedBlocks.unshift(blockJson);
     localStorage.setItem(localStorageName, JSON.stringify(savedBlocks));
-	
+		
 	Blockly.Events.disable();
     block.dispose();
 	Blockly.Events.enable();
